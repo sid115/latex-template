@@ -7,6 +7,7 @@ This repository contains a general-purpose LaTeX template to help you get starte
 - **.gitignore**: Specifies files and directories to be ignored by Git.
 - **header.sty**: Custom LaTeX package containing the header configuration and commonly used packages.
 - **images/**: Directory to store images used in the document.
+- **latex-template**: Shell script to clone this repository and prepare it for use.
 - **literatur.bib**: Bibliography file containing references in BibTeX format.
 - **main.tex**: The main LaTeX file where the document is compiled.
 - **Makefile**: Makefile for automating the LaTeX compilation process.
@@ -42,6 +43,7 @@ The following steps expect a UNIX-like environment. If you are using Windows, yo
     - Add sections and chapters in the `sections/` directory.
     - Include these sections in the `main.tex` file.
     - Update `literatur.bib` with your references.
+    - You can remove `latex-template` and `README.md` files if you wish.
 
 3. **Compile the Document**
     - Compile manually by running:
@@ -61,3 +63,14 @@ The following steps expect a UNIX-like environment. If you are using Windows, yo
 
 - Modify the `header.sty` file to add or remove packages, define new commands, or change document settings.
 - Modify the `Makefile` to add new rules or change the compilation process.
+
+## Using the script
+
+You can use the `latex-template` script to clone this repository and prepare it for use. Run the following commands to use the script:
+
+```bash
+chmod +x latex-template
+./latex-template
+```
+
+> Tip: Put the `latex-template` script in your PATH (e.g., `~/.local/bin/`) for easy access.

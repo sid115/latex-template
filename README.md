@@ -3,16 +3,6 @@
 This repository contains a general-purpose LaTeX template to help you get started with your document creation. It provides a customizable structure suitable for various types of documents, such as reports, articles, and theses.
 
 ## Folder Structure
-.
-├── .gitignore
-├── header.sty
-├── images/
-├── literatur.bib
-├── main.tex
-├── Makefile
-├── output/
-├── pdfs/
-└── sections/
 
 - **.gitignore**: Specifies files and directories to be ignored by Git.
 - **header.sty**: Custom LaTeX package containing the header configuration and commonly used packages.

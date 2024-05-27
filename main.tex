@@ -1,0 +1,33 @@
+\documentclass[a4paper,11pt,oneside]{article}
+
+\usepackage{header} % all packages and custom commands are defined in header.sty
+
+\pagenumbering{Roman}
+
+% Define the title, subtitle, author and date
+\title{TITLE \\ \textbf{SUBTITLE}}
+\author{YOUR NAME}
+\date{DATE}
+
+\begin{document}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+
+% Create the title page
+\maketitle
+\newpage
+
+% Generate the table of contents
+\tableofcontents
+\newpage
+
+% Begin adding sections
+% \section{SECTION TITLE}
+% \import{\sectionpath}{SECTION.tex}
+
+\newpage
+\printbibliography
+\listoffigures
+\listoftables
+
+\end{document}

@@ -1,0 +1,111 @@
+\ProvidesPackage{header}
+
+% PACKAGES
+
+% Language and Font Encoding
+\usepackage[english]{babel}           % Language support
+\usepackage[T1]{fontenc}              % Correct output of special characters (e.g., accented letters)
+\usepackage[utf8]{inputenc}           % Allows the use of UTF-8 character encoding in the source file
+
+% Fonts and Typography
+\usepackage{lmodern}                  % Latin Modern font for better text rendering
+\usepackage{setspace}                 % Control line spacing
+\usepackage{ulem}                     % Underline and strikeout text
+\usepackage[colorlinks,hidelinks]{hyperref} % Hyperlinks in documents without color boxes (optional)
+
+% Page Layout
+\usepackage[top=2cm, bottom=1cm, left=2cm, right=2cm]{geometry} % Customize page margins
+\usepackage{fancyhdr}                 % Custom headers and footers
+
+% Color
+\usepackage{xcolor}                   % Allow the use of colors
+\usepackage{color}                    % Color package, commonly used for text and shading, here for backward compatibility
+
+% Figures and Graphics
+\usepackage{graphicx}                 % Include graphics
+\usepackage{svg}                      % Include and configure SVG graphics
+\usepackage{float}                    % Improved floating environments
+\usepackage{pdfpages}                 % Include entire PDF pages
+\usepackage{rotating}                 % Rotate objects like tables and figures
+
+% Mathematics
+\usepackage{amsmath}                  % AMS mathematical facilities
+\usepackage{amsthm}                   % Theorem environments
+\usepackage{amsfonts}                 % AMS fonts (including math symbols)
+
+% Lists
+\usepackage{enumitem}                 % Customize list environments (itemize, enumerate)
+
+% Tables
+\usepackage{longtable}                % Multi-page tables
+\usepackage{booktabs}                 % Improved table formatting
+\usepackage{multirow}                 % Multi-row cells in tables
+\usepackage{colortbl}                 % Color tables
+
+% Miscellaneous
+\usepackage{csquotes}                 % Context-sensitive quotation marks
+\usepackage{import}                   % Importing sections and figures
+\usepackage{listings}                 % Code listings for source code samples
+
+% Bibliography
+\usepackage[style=numeric,sorting=none]{biblatex} % Bibliography management
+\addbibresource{literatur.bib}                    % BibTex file containing bibliography entries
+
+% SETTINGS
+
+% Inludes
+\graphicspath{{./images/}}            % Path to image folder
+\newcommand{\pdfpath}{./pdfs/}        % Path to folder containing PDFs
+\newcommand{\sectionpath}{./sections/} % Path to folder containing sections
+
+% Paragraph settings
+\setlength{\parindent}{0pt}           % Disable paragraph indentation
+
+% Listings (code formatting) styles
+% C code style
+\lstdefinestyle{CStyle}{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    identifierstyle=\color{black},
+    commentstyle=\color{green!50!black}\itshape,
+    stringstyle=\color{red},
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b,
+    moredelim=[is][\bfseries\color{purple}]{\%\%}{\%\%}
+}
+
+% Shell script style
+\lstdefinestyle{ShellStyle}{
+    language=bash,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    identifierstyle=\color{black},
+    commentstyle=\color{green!50!black}\itshape,
+    stringstyle=\color{red},
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b,
+    morekeywords={ls, cd, echo, exit, export, sudo, mv, cp, rm, mkdir, rmdir, touch},
+    morecomment=[s]{\#}{\n}
+}
+
+% Apply these styles using \lstset
+\lstset{ style=CStyle } % Default style = C style
+
+% Define new commands to switch styles
+\newcommand{\setCStyle}{\lstset{style=CStyle}}
+\newcommand{\setShellStyle}{\lstset{style=ShellStyle}}

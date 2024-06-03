@@ -26,6 +26,11 @@
 % \import{\sectionpath}{SECTION.tex}
 
 \newpage
+
+\addcontentsline{toc}{section}{List of Abbreviations} % force listing in table of contents
+\printglossary[type=\acronymtype, title=List of Abbreviations] % print acronyms
+\printglossary[] % print terms
+
 \printbibliography
 \listoffigures
 \listoftables

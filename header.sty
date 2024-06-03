@@ -51,6 +51,21 @@
 \usepackage[style=numeric,sorting=none]{biblatex} % Bibliography management
 \addbibresource{literatur.bib}                    % BibTex file containing bibliography entries
 
+% Glossary / List of Abbreviations
+% Problems with compiling? Refer to: https://tex.stackexchange.com/questions/156270/has-anyone-managed-to-use-glossaries-with-texstudio-on-windows
+\usepackage[acronym, nonumberlist, nopostdot]{glossaries} % nonumberlist: no page numbers in glossary, nopostdot: no dot after longDescription
+\makeglossaries
+%\newacronym{Label}{shortDescription}{longDescription}
+%\newglossaryentry{formula}
+%{
+%	name=formula,
+%	description={A mathematical expression}
+%}
+% usage %
+%\acrfull{Label} renders as: longDescription (shortDescription)
+%\acrlong{Label} renders as: longDescription
+%\acrshort{Label} renders as: shortDescription
+
 % SETTINGS
 
 % Inludes
